@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap');
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: cornsilk;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+    background-color: #053127;
+    background-image: url(./img/bg.svg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    width: 80%;
+    max-width:1080px;
+}
+
+
+.topnav {
+    display: none;
+}
+
+nav {   
+    width: 100%;
+    max-width: 1080px;
+    padding: 15px 20px 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-sizing: border-box;
+    z-index: 3;
+    
+}
+
+
+#logoMobile {
+
+    height: auto;
+    width: 32px;
+    margin: 4px 0 0 10px;
+    transition: 0.2s;
+    transform: none;
+}
+
+#logo {
+    width: 60px;
+    height: auto;
+    transition: 0.2s;
+    transform: none;
+}
+
+#logo:hover {
+    transform: rotate3d(1,1,1,-45deg) scale(130%);
+    transition: 0.2s;
+    -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    
+}
+
+
+
+
+.navMenu {
+    max-width: 1080px;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.navItem {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 7px;
+    margin: 0 0 0 10px;
+    padding: 4px 10px;
+    user-select: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+
+
+}
+  
+.navItem:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-right: 5px solid rgba(255, 248, 220, 0.4);
+    transition: 0.3s;
+    
+}
+  
+
+.active {
+    border-right: 5px solid cornsilk;
+    transition: 0.3s;
+}
+  
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+
+  
+.about {  
+    display: flex; 
+    justify-content: center;  
+    flex-direction: column; 
+}
+
+
+.skills {
+    width: 100%;
+    
+}
+
+.skills h2 {
+    width: 100%;
+    text-align: center;
+}
+  
+.contact {  
+
+}
+
+.contact h2 {
+    width: 100%;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#contactForm {
+    width: 80%;
+    display: inline-block;
+    max-width: 600px;
+}
+
+#contactForm input, textarea{ 
+    width: 100%;
+    margin-top: 10px;
+}
+
+#contactForm input::placeholder, textarea::placeholder{ 
+    color: cornsilk;
+    opacity: 0.4;
+}
+
+
+
+#aboutMe {
+    max-width: 700px;
+    width: 100%;
+    padding: 6px 16px;
+    margin-bottom: 30px;
+    text-align: left;
+    border-left: 5px  solid cornsilk;
+    font-weight: 300;
+    font-size: 1.6em;
+    line-height:150%;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);   
+}
+
+#aboutMe:before {
+    content: "";
+    width: 300px;
+    height: 300px;
+    background-image: url("img/logo.png");
+    top: 70px;
+    right: 0px;
+    position: absolute;
+    display: inline-block;
+    opacity: 0.04;
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 1));
+}
+
+
+
+#contacto svg {
+    width: 100px;
+    -webkit-filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
+    margin: 10px;
+    transform:scale(70%);
+    transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.6;
+
+}
+
+#contacto svg:hover {
+    -webkit-filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2));
+    transform:scale(80%);
+    transition: 0.5s;
+    opacity: 1;
+
+}
+
+
+#spacer {
+    width: 100%;
+    height: 5px;
+    background-color: cornsilk;
+}
+
+
+
+#skillList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1000px;
+    margin-top: 40px;
+}
+
+#skillList div {
+    display: flex;   
+    width: 90%;
+}
+
+#skillList div svg {  
+    width: 90px;
+    padding: 10px;
+    margin-top: 30px;
+    max-width: 140px;
+    transition: 0.2s;
+}
+
+
+#skillList div svg:hover {  
+    transform: scale(110%);
+    transition: 0.2s;
+
+}
+
+#portfolio h2 {
+    text-align: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+#portfolioSection {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#portfolioSection h2 {
+    width: 100%;
+    display: inline-block;
+}
+
+.cardFolio {
+    width: 26%;
+    max-width: 240px;
+    height: 260px;
+    background: cornsilk;
+    margin: 2%;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 400;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 0.7em;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+  
+a:link {
+    text-decoration: none;
+    color: cornsilk;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: cornsilk;
+}
+  
+a:focus {
+    text-decoration: none;
+    color: cornsilk;
+}
+  
+a:hover {
+    text-decoration: none;
+    color: cornsilk;
+
+}
+  
+a:active {
+    text-decoration: none;
+    color: cornsilk;
+}
+
+
+
+
+.form__label {
+    font-size: 1.2rem;
+    font-weight:200;
+    margin-left: 2rem;
+    margin-top: 0.4rem;
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(-6rem);
+}
+  
+.form__input, .form__submit {
+    color: cornsilk;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+}
+  
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+}
+  
+.form__text {
+    color: cornsilk;
+    font-size: 1.2rem;
+    border-radius: 0.2rem;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+}
+
+.form__submit {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.form__submit:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.iconBox {
+    max-width: 24%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+
+    nav {
+        display: none;
+    }
+
+    #logo {
+        width: 32px;
+        margin: 4px 0 0 10px;
+    }
+
+    #burga {
+        transform: rotate(90deg);
+    }
+
+
+    .topnav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        background-color: rgba(34, 34, 34, 0.8);
+        position: fixed;
+        z-index: 10;
+    }
+
+    #leftNav {
+        width: calc(100% - 44px);
+    }
+   
+    .topnav #myLinks {
+        width: 100%;
+        display: none;
+    }
+      
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        display: block;
+    }
+      
+    .topnav a.icon {
+        width: 44px;
+        background: rgba(0, 0, 0, 0.8);
+        transition: 0.3s;
+
+    }
+      
+    .topnav a:hover {
+        background-color: rgba(255, 248, 220, 0.5);
+        color: black;
+        transition: 0.3s;
+    }
+
+
+    main {
+        width: 90%;
+    }
+
+    #aboutMe {      
+        font-weight: 100;
+        font-size: 1.2em; 
+    }
+
+    #contacto img {
+        margin: 0px;
+        transform:scale(50%);    
+    }
+    
+    #contacto img:hover {
+        transform:scale(60%);
+        opacity: 1;
+    
+    }
+
+    #contactForm {
+        width: 100%;
+    }
+
+
+
+
+
+}
